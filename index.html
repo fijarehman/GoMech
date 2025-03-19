@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GoMechanic Clone</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo"><img src="logo.png" alt="GoMechanic logo">
+
+        </div>
+        <ul>
+
+            <li><a href="login.html" , target="_blank"><b>Log in </b></a></li>
+            <li><a href="singup.html" , target="_blank"><b>Sign up</b></a></li>
+
+        </ul>
+    </header>
+    <main>
+        <section >
+            <img src="bg.png" alt="background Image" style="width: 1390px; height: 50cqmax;">
+
+        </section>
+    </main>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="service-card">
+            <img src="repair.png" alt="Service 1">
+            <h3>Car Repair</h3>
+            <p>Get your car repaired by experts at affordable prices.</p>
+            <a href="#" class="cta-button">Book Now</a>
+        </div>
+
+        <div class="service-card">
+            <img src="car_service.png" alt="Service 2">
+            <h3>Car Service</h3>
+            <p>Comprehensive car servicing, from oil change to tune-ups.</p>
+            <a href="#" class="cta-button">Book Now</a>
+        </div>
+
+        <div class="service-card">
+            <img src="tire.png" alt="Service 3">
+            <h3>Tire Services</h3>
+            <p>Get your tires replaced or repaired quickly and safely. Special discounts available this week!</p>
+            <a href="#" class="cta-button">Book Now</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title> Car Service Portal </title>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        </head>
+
+        <body class="bg-gray-100 font-sans">
+            <!-- Header Section -->
+            <header class="bg-blue-600 text-white p-4 text-center shadow-md">
+                <h1 class="text-2xl font-bold">Car Service Made Simple</h1>
+            </header>
+            <!-- Steps Section -->
+            <main class="max-w-4xl mx-auto mt-8 bg-white rounded-lg shadow-md p-6 " style="background: rgb(198, 197, 197);">
+                <section>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                        <!-- Step 1 -->
+                        <div class="flex flex-col items-center">
+                            <div class="text-4xl font-bold text-gray-800">1</div>
+                            <h2 class="text-lg font-semibold text-gray-700 text-center mt-2">Select The Perfect Car
+                                Service</h2>
+                            <p class="text-sm text-gray-500 text-center mt-1">From GoMechanic's broad portfolio of
+                                services</p>
+                            <img
+                                src="https://cdn3d.iconscout.com/3d/premium/thumb/car-lifter-3d-icon-download-in-png-blend-fbx-gltf-file-formats--automobile-vehicle-service-pack-icons-8412363.png?f=webp">
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="flex flex-col items-center">
+                            <div class="text-4xl font-bold text-gray-800">2</div>
+                            <h2 class="text-lg font-semibold text-gray-700 text-center mt-2">Schedule Free Doorstep
+                                Pick-up</h2>
+                            <p class="text-sm text-gray-500 text-center mt-1">We offer free pick up and drop for all
+                                services booked</p>
+                            <img
+                                src="https://cdn3d.iconscout.com/3d/premium/thumb/pickup-schedule-truck-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--calender-logistics-service-crime-security-illustrations-4355735.png?f=webp">
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="flex flex-col items-center">
+                            <div class="text-4xl font-bold text-gray-800">3</div>
+                            <h2 class="text-lg font-semibold text-gray-700 text-center mt-2">Track Your Car Service
+                                Real-Time</h2>
+                            <p class="text-sm text-gray-500 text-center mt-1">We will take care of everything from here!
+                            </p>
+                            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/connected-cars-3d-icon-download-in-png-blend-fbx-gltf-file-formats--drive-road-business-service-sedan-automotive-pack-industry-icons-10411105.png?f=webp"
+                                class="mt-4">
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="flex flex-col items-center">
+                            <div class="text-4xl font-bold text-gray-800">4</div>
+                            <h2 class="text-lg font-semibold text-gray-700 text-center mt-2">Earn While We Service</h2>
+                            <p class="text-sm text-gray-500 text-center mt-1">Spread the word! You get Rs.750. Your
+                                friends get Rs.750!</p>
+                            <img
+                                src="https://cdn3d.iconscout.com/3d/premium/thumb/car-price-3d-icon-download-in-png-blend-fbx-gltf-file-formats--vehicle-automobile-transport-auto-care-pack-services-icons-10766868.png?f=webp">
+                        </div>
+                    </div>
+                </section>
+                <hr>
+                <!-- Graph Section -->
+                <section class="mt-12">
+                    <h2 class="text-xl font-bold text-gray-700 mb-4">Performance Graph</h2>
+                    <canvas id="serviceGraph" class="w-full h-64"></canvas>
+                </section>
+            </main>
+
+
+            <!-- Chart.js Script -->
+            <script>
+                const ctx = document.getElementById('serviceGraph').getContext('2d');
+                const serviceGraph = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+                        datasets: [{
+                            label: 'Number of Services',
+                            data: [10, 25, 40, 30, 50, 60],
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'top',
+                            },
+                        },
+                        scales: {
+                            x: {
+                                title: {
+                                    display: true,
+                                    text: 'Months'
+                                }
+                            },
+                            y: {
+                                title: {
+                                    display: true,
+                                    text: 'Number of Services'
+                                }
+                            }
+                        }
+                    }
+                })
+            </script>
+            <br>
+             <hr>
+             
+            <h2 style="color: rgb(173, 181, 188); font-weight: bold; text-align: center;">Car Services Price List in Navi Mumbai, India 2025</h2>
+            <table style="border: 2px solid black; border-collapse: collapse;">
+                <thead>
+                    <tr style="border: 3px solid black;">
+                        <th style="border: 1px solid black;">Services Type</th>
+                        <th style="border: 1px solid black;">Price Starts From</th>
+                        <th style="border: 1px solid black;"> Savings</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="border: 1px solid black;">
+                        <td style="border: 1px solid black;">Car Inspection/Diagnostics</td>
+                        <td style="border: 1px solid black;">₹499</td>
+                        <td style="border: 1px solid black;">15%</td>
+                    </tr>
+                    <tr style="border: 1px solid black;">
+                        <td style="border: 1px solid black;">Inspection</td>
+                        <td style="border: 1px solid black;">₹499</td>
+                        <td style="border: 1px solid black;">25%</td>
+                    </tr>
+                    <tr style="border: 1px solid black;">
+                        <td style="border: 1px solid black;">Door Glass Replacement</td>
+                        <td style="border: 1px solid black;">₹850</td>
+                        <td style="border: 1px solid black;">30%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="image-container">
+                <div class="box">
+                    <img src="i.1.png" alt="Image 1">
+                    <p>repair car</p>
+                </div>
+                <div class="box">
+                    <img src="i.2.png" alt="Image 1">
+                    <p>repair car</p>
+                </div>
+                <div class="box">
+                    <img src="i.3.png" alt="Image 1">
+                    <p>repair car</p>
+                </div>
+                <div class="box">
+                    <img src="i.4.png" alt="Image 1">
+                    <p>repair car</p>
+                </div>
+                <div class="box">
+                    <img src="i.5.png" alt="Image 1">
+                    <p>repair car</p>
+                </div>
+                <div class="box">
+                    <img src="i.6.png" alt="Image 1">
+                    <p>repair car</p>
+                </div>
+                <div class="box">
+                    <img src="i.7.png" alt="Image 1">
+                    <p>repair car</p>
+                </div>
+                <div class="box">
+                    <img src="i.8.png" alt="Image 1">
+                    <p>repair car</p>
+                </div>
+                <div class="box">
+                    <img src="i.9.png" alt="Image 1">
+                    <p>repair car</p>
+                </div>
+                <div class="box">
+                    <img src="i.10.png" alt="Image 1">
+                    <p>repair car</p>
+                </div>
+                <div class="box">
+                    <img src="i.11.png" alt="Image 1">
+                    <p>repair car</p>
+                </div>
+                <div class="box">
+                    <img src="i.12.png" alt="Image 1">
+                    <p>repair car</p>
+                </div>
+                <div class="box">
+                    <img src="i.13.png" alt="Image 1">
+                    <p>repair car</p>
+                </div>
+                <div class="box">
+                    <img src="i.14.png" alt="Image 1">
+                    <p>repair car</p>
+                </div>
+                <div class="box">
+                    <img src="i.15.png" alt="Image 1">
+                    <p>repair car</p>
+                </div>
+                
+            </div>
+        </body>
+
+
+        </html>
+
+        <!-- Why Choose Us Section -->
+        <section style="padding: 100px;">
+            <footer>
+                <font colour="white">
+                    <h2>Why Choose Us?</h2>
+                    <p>We offer fast, reliable, and affordable car services at your doorstep. Our team of expert
+                        mechanics is always ready to help with a wide range of vehicle issues. Book an appointment today
+                        and experience hassle-free car care.</p>
+                    <a href="#" class="cta-button">Learn More</a>
+            </footer>
+        </section>
+    </div>
+    </font>
+    <footer>
+        <p>&copy; 2025 GoMechanic. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
